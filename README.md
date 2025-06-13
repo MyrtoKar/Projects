@@ -1,37 +1,31 @@
-# 🔌 Energy Forecasting & Anomaly Detection with LSTM
+# 🌡️ IoT Sensor Anomaly Detection using LSTM & Azure Data Explorer
 
-This project applies deep learning techniques to forecast household energy consumption and detect anomalies using multivariate time series data (temperature, humidity, power usage).
+This project demonstrates an end-to-end anomaly detection pipeline for IoT sensor data (temperature and humidity) using a multivariate LSTM model. Real-time data is queried from **Azure Data Explorer**, processed using **Python**, and anomalies are detected using **deep learning**.
 
-## 🚀 Overview
+## 📊 Project Overview
 
-- **Goal**: Predict future energy usage and detect unusual consumption patterns.
-- **Approach**: Long Short-Term Memory (LSTM) neural network for sequence modeling.
-- **Extras**: Anomaly detection based on prediction residuals.
+- **Source**: IoT sensors (e.g., DHT22/BME280) streaming to Azure Data Explorer (ADX)
+- **Goal**: Predict next temperature reading and detect anomalies
+- **Model**: LSTM (Long Short-Term Memory) neural network
+- **Approach**: Multivariate time series → Forecasting → Residual anomaly detection
 
-## 🧠 Machine Learning
+## 🧠 Key Features
 
-- Model: LSTM-based regression (TensorFlow/Keras)
-- Inputs: Energy usage (kWh), temperature (°C), humidity (%)
-- Output: 1-hour ahead forecast
-- Anomalies: Detected using 95th percentile of residuals
+- 🔌 Live data ingestion from Azure Data Explorer
+- 🔄 Multivariate time series modeling with temperature & humidity
+- 🧠 Deep learning model using TensorFlow/Keras
+- ⚠️ Anomaly detection via residual analysis
+- 📈 Interactive plots of predictions and anomalies
 
-## 📊 Tools & Stack
+## 🛠️ Technologies Used
 
-- Python (Colab)
-- Pandas, NumPy, Matplotlib, Scikit-learn
-- TensorFlow/Keras
-- Streamlit (optional for dashboard)
+| Tool/Library        | Purpose                     |
+|---------------------|-----------------------------|
+| Python              | Core programming language   |
+| Azure Data Explorer | IoT data storage and query  |
+| TensorFlow / Keras  | Deep learning framework     |
+| Pandas / NumPy      | Data manipulation           |
+| Matplotlib          | Visualization               |
 
-## 📝 Results
-
-- RMSE: _insert value here_
-- MAE: _insert value here_
-- Detected anomalies: _insert number or sample insight here_
-
-## 📈 Visuals
-
-- Forecast vs. Actual Energy Usage
-- Anomaly visualization with residual-based thresholds
-
-## 📂 Structure
+## 📂 Project Structure
 
